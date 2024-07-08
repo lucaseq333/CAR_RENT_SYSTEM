@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 enum engineType{
     COMBUSTION, ELECTRIC
 }
@@ -30,11 +32,17 @@ public class Car {
     }
 
     public void rentedBy(Client client){
-
+        if(isRented==true){
+            for(int i=0; i<client.rentedCars.length; i++){
+                System.out.println("Rented cars: " + client.rentedCars[i]);
+            }
+        }
     }
 
     public void addToQueue(){
+        if(isRented==true){
 
+        }
     }
 
     public String carName(){
