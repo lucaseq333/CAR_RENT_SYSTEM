@@ -7,7 +7,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                //Frame frame = new Frame();
+                Frame frame = new Frame();
             }
         });
 
@@ -32,6 +32,11 @@ public class Main {
         clients[1].rentCar(cars[0],clients[1]);
         clients[2].rentCar(cars[0],clients[2]);
         clients[1].returnCar(cars[0]);
+        clients[2].rentCar(cars[0],clients[2]);
+        clients[1].rentCar(cars[0],clients[1]);
+        clients[0].rentCar(cars[0],clients[1]);
+
+        System.out.println("\nSize of queue for car rents: " + Client.clientQueue.size());
 
     }
 }

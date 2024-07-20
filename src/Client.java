@@ -1,6 +1,7 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class Client {
 
@@ -9,7 +10,7 @@ public class Client {
     int clientID;
     int amountOfRentedCars;
     Car rentedCars[];
-    Queue<String> clientQueue = new LinkedList<>();
+    static Queue<String> clientQueue = new LinkedList<>();
 
     public Client(String name, String surname, int birthYear){
         this.name=name;
@@ -31,14 +32,6 @@ public class Client {
         if(car.isRented==true){
             car.isRented=false;
             System.out.println(name + " " + surname + " returned " + car.carName());
-        }
-    }
-
-    public void showQueue(){
-        Iterator<String> iterator = clientQueue.iterator();
-        while(iterator.hasNext()){
-            String value = iterator.next();
-            System.out.println(value);
         }
     }
 

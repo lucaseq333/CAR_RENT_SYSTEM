@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Iterator;
 
 enum engineType{
     COMBUSTION, ELECTRIC
@@ -39,14 +40,22 @@ public class Car {
         }
     }
 
+    public String carName(){
+        return brand + " " + model;
+    }
+
+    public void showQueue(Car car){
+        Iterator<String> iterator = Client.clientQueue.iterator();
+        while(iterator.hasNext()){
+            String value = iterator.next();
+            System.out.println(value + " waits for " + car.brand + " " + car.model);
+        }
+    }
+
     public void addToQueue(){
         if(isRented==true){
 
         }
-    }
-
-    public String carName(){
-        return brand + " " + model;
     }
 
 }
