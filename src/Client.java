@@ -37,7 +37,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Name: " + name + " " + surname + "\nBirth year: " + birthYear;
+        return name + " " + surname;
     }
 
     public void isAdult(){
